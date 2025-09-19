@@ -9,7 +9,7 @@ html,body{
 }
 nav{
     box-shadow: 5px 5px 5px rgba(1,1,1,0.05);
-    
+    width: 100%;
     top :0;
     margin-bottom: 30px;
     background-color: white blur(45px);
@@ -136,7 +136,7 @@ opacity: 0.8;
         justify-content: center;
     }
     .roll-in-lef img{
-        width: 90%;
+        width: 40%;
     }
     .hero-content{
         gap: 10px;
@@ -146,4 +146,139 @@ opacity: 0.8;
         font-size: 32px;
 
      }
+}
+
+/* 📱 Mobile First Approach (default styles pehle likho) */
+
+/* Example: Reset + base styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.bar-icon {
+  display: block;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-img img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.hero-content {
+  margin-top: 20px;
+}
+
+.explore-btn {
+  background: #ff6600;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Features Section */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ===================== */
+/* 📱 For small devices (up to 600px) */
+/* ===================== */
+@media (max-width: 600px) {
+  .navigation {
+    flex-direction: row;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+
+  .features {
+    flex-direction: column;
+  }
+}
+
+/* ===================== */
+/* 📱➡️💻 For tablets (600px to 1024px) */
+/* ===================== */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .hero {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .hero-img img {
+    max-width: 400px;
+  }
+
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .feature {
+    width: 45%;
+  }
+}
+
+/* ===================== */
+/* 💻 For desktops (above 1024px) */
+/* ===================== */
+@media (min-width: 1025px) {
+  .container {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .hero-img img {
+    max-width: 500px;
+  }
+
+  .features {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .feature {
+    width: 30%;
+  }
 }
